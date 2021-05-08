@@ -4,11 +4,14 @@ import { useEffect, useState} from "react";
 export default function UserList(){
     let [userList, setUserList] = useState([]);
 
-    useEffect(async ()=>{
+    useEffect(()=>{
+        async function fetchMyAPI() {
       let users = await  fetch("https://60926a0185ff510017212b19.mockapi.io/users");
       let userData = await users.json();
       console.log(userData);
       setUserList([...userData])
+        }
+        fetchMyAPI()
     }, [])
     return <>
      <h1 className="h3 mb-2 text-gray-800">Tables</h1>

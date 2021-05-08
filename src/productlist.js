@@ -4,11 +4,14 @@ import {useEffect, useState} from "react";
 export default function ProductList(){
     let [productList, setProductList] = useState([]);
 
-    useEffect(async ()=>{
+    useEffect(()=>{
+        async function fetchmyAPI() {
       let products = await  fetch("https://60926a0185ff510017212b19.mockapi.io/products");
       let productData = await products.json();
       console.log(productData);
       setProductList([...productData])
+    }
+    fetchmyAPI()
     }, [])
     return <>
         <h1>Product Create</h1>
