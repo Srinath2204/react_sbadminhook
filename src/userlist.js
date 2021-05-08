@@ -3,7 +3,6 @@ import {useContext, useEffect, useState} from "react";
 import UserContext from './userContext';
 
 export default function UserList(){
-    let users=useContext(UserContext);
     let [userList, setUserList] = useState([]);
 
     useEffect(async ()=>{
