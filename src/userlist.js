@@ -1,6 +1,5 @@
 import {Link} from "react-router-dom";
-import {useContext, useEffect, useState} from "react";
-import UserContext from './userContext';
+import { useEffect, useState} from "react";
 
 export default function UserList(){
     let [userList, setUserList] = useState([]);
@@ -16,8 +15,8 @@ export default function UserList(){
                     <p className="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
                         For more information about DataTables, please visit the <a target="_blank" rel="noreferrer"
                             href="https://datatables.net">official DataTables documentation</a>.</p>
-<Link to="usercreate">Create User</Link>
 
+                <Link to="usercreate">Create User</Link>
 
                     <div className="card shadow mb-4">
                         <div className="card-header py-3">

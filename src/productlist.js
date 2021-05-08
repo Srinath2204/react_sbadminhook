@@ -1,9 +1,7 @@
 import {Link} from "react-router-dom";
-import {useContext, useEffect, useState} from "react";
-import UserContext from './userContext';
+import {useEffect, useState} from "react";
 
 export default function ProductList(){
-    let products=useContext(UserContext);
     let [productList, setProductList] = useState([]);
 
     useEffect(async ()=>{
